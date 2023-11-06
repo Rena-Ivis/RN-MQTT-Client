@@ -71,11 +71,24 @@ function App(): JSX.Element {
 
   return (
     <SafeAreaView>
-      <ScrollView contentContainerStyle={{ padding: 20 }} showsVerticalScrollIndicator={false}>
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline' }}>
-          <Text style={{fontSize: 20, marginBottom: isSettingsOpen ? 0 : 20}}>MQTT Settings</Text>
+      <ScrollView
+        contentContainerStyle={{ padding: 20 }}
+        showsVerticalScrollIndicator={false}
+      >
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'baseline'
+          }}>
+          <Text style={{
+            fontSize: 20,
+            marginBottom: isSettingsOpen ? 0 : 20
+          }}>MQTT Settings</Text>
           <TouchableOpacity onPress={() => setIsSettingsOpen(!isSettingsOpen)}>
-            {isSettingsOpen ? <Image source={require('./square-caret-up-regular.png')} style={{ width: 16, height: 16 }} /> : <Image source={require('./square-caret-down-regular.png')} style={{ width: 16, height: 16 }} />}
+            {isSettingsOpen ?
+              <Image source={require('./square-caret-up-regular.png')} style={{ width: 16, height: 16 }} /> :
+              <Image source={require('./square-caret-down-regular.png')} style={{ width: 16, height: 16 }} />}
           </TouchableOpacity>
         </View>
         {isSettingsOpen && <>
@@ -105,10 +118,20 @@ function App(): JSX.Element {
             containerStyle={{ marginVertical: 20 }}
           />
         </>}
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline' }}>
-          <Text style={{fontSize: 20, marginBottom: isPublishOpen ? 0 : 20}}>MQTT Publish</Text>
+        <View style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'baseline'
+        }
+        }>
+          <Text style={{
+            fontSize: 20,
+            marginBottom: isPublishOpen ? 0 : 20
+          }}>MQTT Publish</Text>
           <TouchableOpacity onPress={() => setIsPublishOpen(!isPublishOpen)}>
-            {isPublishOpen ? <Image source={require('./square-caret-up-regular.png')} style={{ width: 16, height: 16 }} /> : <Image source={require('./square-caret-down-regular.png')} style={{ width: 16, height: 16 }} />}
+            {isPublishOpen ?
+              <Image source={require('./square-caret-up-regular.png')} style={{ width: 16, height: 16 }} /> :
+              <Image source={require('./square-caret-down-regular.png')} style={{ width: 16, height: 16 }} />}
           </TouchableOpacity>
         </View>
         {isPublishOpen && <>
